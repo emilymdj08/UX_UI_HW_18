@@ -34,6 +34,28 @@ body {
     font-size: 15px;
     border-radius: 4px;
   }
+
+  /* template */ 
+
+.flexContainer {
+    display: flex;
+}
+.flexContainer > div {
+    display: flex;
+    width: 33%;
+    background-color: #373738;
+    margin: 50px;
+    padding: 50px;
+}
+
+.workGrid {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "box1 box2";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 125px 75%;
+  }
   footer {
     background-color: #373738;
     padding: 5px;
@@ -47,6 +69,16 @@ body {
     display: inline-block;
     padding: 0px 7px;
   }
-  /* template */ 
+x
 
-  
+    @media (max-width: 600px) {
+    .workGrid {
+        grid-template-areas:
+          "header"
+          "box1"
+          "header"
+          "box2";
+        grid-template-rows: 300px 300px;
+        grid-template-columns: 1fr;
+      }
+    }
